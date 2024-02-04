@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Définition des droits d'accès pour le modèle trading.asset -->
+    <record id="group_trading_user" model="res.groups">
+        <field name="name">User Trading</field>
+    </record>
+
+    <record id="group_trading_manager" model="res.groups">
+        <field name="name">Manager Trading</field>
+        <field name="implied_ids" eval="[(4, ref('group_trading_user'))]"/>
+    </record>
+
+</odoo>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Définition de la vue tree -->
+    <record id="view_trading_asset_tree" model="ir.ui.view">
+        <field name="name">trading.asset.tree</field>
+        <field name="model">trading.asset</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="symbol"/>
+                <field name="description"/>
+                <field name="asset_type"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Définition de la vue form -->
+    <record id="view_trading_asset_form" model="ir.ui.view">
+        <field name="name">trading.asset.form</field>
+        <field name="model">trading.asset</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="symbol"/>
+                        <field name="description"/>
+                        <field name="asset_type"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Définition de la vue search -->
+    <record id="view_trading_asset_search" model="ir.ui.view">
+        <field name="name">trading.asset.search</field>
+        <field name="model">trading.asset</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" string="Name"/>
+                <field name="symbol" string="Symbol"/>
+                <field name="asset_type" string="Type"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Définition de l'action pour le menu asset -->
+    <record id="action_trading_asset" model="ir.actions.act_window">
+        <field name="name">Assets</field>
+        <field name="res_model">trading.asset</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_trading_asset_tree"/>
+        <field name="search_view_id" ref="view_trading_asset_search"/>
+    </record>
+
+    <!-- Définition du sous-menu pour asset -->
+    <menuitem id="menu_trading_asset" name="Asset" parent="menu_trading" sequence="1" action="action_trading_asset"/>
+
+</odoo>

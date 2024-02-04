@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_trading_quote_user,Trading Quote User,model_trading_quote,group_trading_user,1,0,0,0
+access_trading_quote_manager,Trading Quote Manager,model_trading_quote,group_trading_manager,1,1,1,1
+access_trading_asset_user,Trading Asset User,model_trading_asset,group_trading_user,1,0,0,0
+access_trading_asset_manager,Trading Asset Manager,model_trading_asset,group_trading_manager,1,1,1,1
+access_trading_source_user,Trading Source User,model_trading_source,group_trading_user,1,0,0,0
+access_trading_source_manager,Trading Source Manager,model_trading_source,group_trading_manager,1,1,1,1
+access_trading_transaction_user,Trading Transaction User,model_trading_transaction,group_trading_user,1,0,0,0
+access_trading_transaction_manager,Trading Transaction Manager,model_trading_transaction,group_trading_manager,1,1,1,1
